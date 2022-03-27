@@ -1,9 +1,13 @@
-package com.bhavanipatra;
+package com.bhavanipatra.response;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MarsRover {
 	private Long id;
 	private String name;
+	@JsonProperty("landing_date")
 	private String landingDate;
+	@JsonProperty("launch_date")
 	private String launchDate;
 	private String status;
 	public Long getId() {

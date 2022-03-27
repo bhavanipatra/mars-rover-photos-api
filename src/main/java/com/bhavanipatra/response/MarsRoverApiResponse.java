@@ -1,4 +1,4 @@
-package com.bhavanipatra;
+package com.bhavanipatra.response;
 
 import java.util.ArrayList;
 import java.util.List;

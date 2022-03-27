@@ -1,9 +1,13 @@
-package com.bhavanipatra;
+package com.bhavanipatra.response;
 
-public class Camera {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class MarsCamera {
 	private Long id;
 	private String name;
+	@JsonProperty("rover_id")
 	private Integer roverId;
+	@JsonProperty("full_name")
 	private String fullName;
 	public Long getId() {
 		return id;
@@ -31,7 +35,8 @@ public class Camera {
 	}
 	@Override
 	public String toString() {
-		return "Camera [id=" + id + ", name=" + name + ", roverId=" + roverId + ", fullName=" + fullName + "]";
+		return "MarsCamera [id=" + id + ", name=" + name + ", roverId=" + roverId + ", fullName=" + fullName + "]";
 	}
+	
 	
 }

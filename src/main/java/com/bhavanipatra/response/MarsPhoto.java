@@ -1,12 +1,16 @@
-package com.bhavanipatra;
+package com.bhavanipatra.response;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MarsPhoto {
 	private Long id;
 	private Integer sol;
-	private Camera camera;
+	private MarsCamera camera;
+	@JsonProperty("img_src")
 	private String imgSrc;
+	@JsonProperty("earth_date")
 	private String earthDate;
-	private Rover rover;
+	private MarsRover rover;
 	public Long getId() {
 		return id;
 	}
@@ -19,10 +23,10 @@ public class MarsPhoto {
 	public void setSol(Integer sol) {
 		this.sol = sol;
 	}
-	public Camera getCamera() {
+	public MarsCamera getCamera() {
 		return camera;
 	}
-	public void setCamera(Camera camera) {
+	public void setCamera(MarsCamera camera) {
 		this.camera = camera;
 	}
 	public String getImgSrc() {
@@ -37,10 +41,10 @@ public class MarsPhoto {
 	public void setEarthDate(String earthDate) {
 		this.earthDate = earthDate;
 	}
-	public Rover getRover() {
+	public MarsRover getRover() {
 		return rover;
 	}
-	public void setRover(Rover rover) {
+	public void setRover(MarsRover rover) {
 		this.rover = rover;
 	}
 	@Override
@@ -48,5 +52,6 @@ public class MarsPhoto {
 		return "MarsPhoto [id=" + id + ", sol=" + sol + ", camera=" + camera + ", imgSrc=" + imgSrc + ", earthDate="
 				+ earthDate + ", rover=" + rover + "]";
 	}
+	
 	
 }
